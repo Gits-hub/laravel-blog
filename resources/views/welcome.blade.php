@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog-App</title>
-    <style>
-        li{
-            list-style: none;
-        }
+@extends('layout')
 
-
-        a{
-            color: rgb(145, 151, 151);
-            text-decoration: none;
-        }
-    </style>
-</head>
-<body>
+@section('content')
+    
     <h1>Available {{$Name}}</h1>
     @unless (!$profile)
 
@@ -25,7 +10,7 @@
 
         <li>
             <ul>Status: {{$person['status']}}</ul>
-            <ul>Nationality: {{$person['nationality']}}</ul>
+            <ul>Location: {{$person['nationality']}}</ul>
             <ul>Height: {{$person['height']}}inches</ul>
             <ul>Weight: {{$person['weight']}}Kg</ul>
             <ul>Disability: {{$person['disability']}}</ul>
@@ -35,5 +20,5 @@
     @else
         <p>No Profiles posted</p>
     @endunless
-</body>
-</html>
+
+@endsection
