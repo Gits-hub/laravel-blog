@@ -4,9 +4,9 @@
 
 @unless (!$person)
 
-<h2>{{$person['names']}}/ {{$person['age']}}</h2>
+<h2 class="text-lg font-bold">{{$person['names']}}/ {{$person['age']}}</h2>
 
-<li>
+<li class="list-none">
     <ul>Status: {{$person['status']}}</ul>
     <ul>Location: {{$person['nationality']}}</ul>
     <ul>Height: {{$person['height']}}inches</ul>

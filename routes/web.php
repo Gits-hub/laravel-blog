@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\profileController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\profile;
@@ -15,18 +16,9 @@ use App\Models\profile;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome', [
-        'Name' => 'Profiles',
-        'profile' => profile::all()
-    ]);
-});
+Route::get('/', [profileController::class, 'index']);
 
-Route::get('/{id}', function ($id) {
-    return view('profile', [
-        'person' => profile::find($id)
-    ]);
-});
+Route::get('/{id}', [profileController::class, 'show']);
 
 Route::get('/home', function () {
     return response('<h3>Welcome to laravel programming</h3>');
