@@ -7,7 +7,7 @@
 
     @foreach ($profile as $person)
     <div class="p-5 mb-4 w-12/12 bg-lightGray rounded-md">
-        <h2 class="text-lg font-bold"><a href="/{{$person['up_id']}}">{{$person['names']}}/ {{$person['age']}}</a></h2>
+        <h2 class="text-lg font-bold hover:underline"><a href="/{{$person['up_id']}}">{{$person['names']}}/ {{$person['age']}}</a></h2>
 
         <li class="list-none">
             <ul>Status: {{$person-> status}}</ul>
